@@ -3,7 +3,6 @@ package com.example.security.service;
 import com.example.security.mapper.MenuMapper;
 import com.example.security.model.Hr;
 import com.example.security.model.Menu;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
