@@ -10,7 +10,7 @@ public class Role implements Serializable {
 
     private String name;
 
-    private String namezh;
+    private String nameZh;
 
     private static final long serialVersionUID = 1L;
 }
