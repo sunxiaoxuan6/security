@@ -1,7 +1,6 @@
 package com.example.security.controller;
 
 import com.example.security.model.JObLevel;
-import com.example.security.model.Position;
 import com.example.security.model.RespBean;
 import com.example.security.service.JObLevelService;
 import org.springframework.beans.factory.annotation.Autowired;
