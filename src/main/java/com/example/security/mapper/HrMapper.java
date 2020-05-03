@@ -1,7 +1,11 @@
 package com.example.security.mapper;
 
 import com.example.security.model.Hr;
+import com.example.security.model.Role;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 public interface HrMapper {
     int deleteByPrimaryKey(Integer id);
@@ -16,6 +20,15 @@ public interface HrMapper {
 
     int updateByPrimaryKey(Hr record);
 
-    @Select("select * from hr where username=#{username}")
     Hr loadUserByUsername(String username);
+
+    List<Role> getHrRolesById(Integer id);
+
+    List<Hr> getAllHrs(@Param("hrid") Integer hrid, @Param("keywords") String keywords);
+
+    List<Hr> getAllHrsExceptCurrentHr(Integer id);
+
+    Integer updatePasswd(@Param("hrid") Integer hrid, @Param("encodePass") String encodePass);
+
+    Integer updateUserface(@Param("url") String url, @Param("id") Integer id);
 }
